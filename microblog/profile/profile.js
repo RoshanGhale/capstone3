@@ -18,7 +18,7 @@ function newProfile() {
     {
       method: "GET",
       headers: {
-        Authorization: `Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTUyNTU4OCwiZXhwIjoxNzE5NjExOTg4fQ.Ys3RCDdjT40YlOojqfbgv7eLmzVBTTI6k9KXyFbZ0hE`,
+        Authorization: `Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTU3OTk0MCwiZXhwIjoxNzE5NjY2MzQwfQ.v1iyzNFeVGgsZHW7dbI3IhH8u_zJlu6Mq34JAAQ-g3s`,
       },
     }
   )

@@ -5,7 +5,7 @@
 const postCards = document.querySelector("#postCards");
 const url = "http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/";
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTQwOTM2MiwiZXhwIjoxNzE5NDk1NzYyfQ.fS_m6e_5r1x2B7yeGhxbR2WBsLWeUdjvYGCkRyzhlI4";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTU3OTk0MCwiZXhwIjoxNzE5NjY2MzQwfQ.v1iyzNFeVGgsZHW7dbI3IhH8u_zJlu6Mq34JAAQ-g3s";
 // Logout
 logoutButton.addEventListener("click", () => {
   localStorage.removeItem("login-data");
@@ -48,7 +48,7 @@ function displayPosts() {
   fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/", {
     method: "GET",
     headers: {
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTUyMTE0NCwiZXhwIjoxNzE5NjA3NTQ0fQ.oFPI2zFo2cUEXLEgsKdh-KvtznR7IkruIz2-9oDay14`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJvc2hhbiIsImlhdCI6MTcxOTU3OTk0MCwiZXhwIjoxNzE5NjY2MzQwfQ.v1iyzNFeVGgsZHW7dbI3IhH8u_zJlu6Mq34JAAQ-g3s`,
     },
   })
     .then((response) => response.json())

@@ -9,18 +9,18 @@ function createPost() {
      method: "POST",
        headers: {
          "Content-Type": "application/json",
-         Authorization: `Bearer ${loginData.token}`,
+         Authorization: Bearer ${loginData.token},
        },
        body: JSON.stringify(post),
      };
-     fetch(`${apiBaseURL}/api/posts`, requestInit)
+     fetch(${apiBaseURL}/api/posts, requestInit)
       .then((response) => response.json())
        .then((post) => {
          window.location.replace("posts.html");
        });
 }*/
 
-// Authorization: `Bearer ${loginData.token}`,
+// Authorization: Bearer ${loginData.token},
 
 /*document.addEventListener("DOMContentLoaded", function() {
   const postText = document.getElementById("postText");
@@ -48,7 +48,7 @@ function createPost() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${loginData.token}`
+        Authorization: Bearer ${loginData.token}
       },
       body: JSON.stringify(post)
     };
@@ -73,7 +73,7 @@ function createPost() {
 });*/
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts";
+  const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts" ;
   const createPostForm = document.getElementById("createPostForm");
 
   createPostForm.addEventListener("submit", function (event) {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Post Text:", postText);
     
     const loginData = getLoginData();
-    console.log("login Data:", loginData);
+    
 
     const postData = {
       text: postText,
@@ -94,27 +94,27 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${loginData.token}`,
+          Authorization: Bearer ${loginData.token},
         },
         body: JSON.stringify(postData),
       };
-      fetch(`${apiBaseURL}/api/posts`, requestInit)
+      fetch(${apiBaseURL}/api/posts, requestInit)
         .then((response) => response.json())
         .then((post) => {
           window.location.replace("posts.html");
         });
 
-      // fetch(`${apiBaseURL}/api/posts`, {
+      // fetch(${apiBaseURL}/api/posts, {
       //   method: "POST",
       //   headers: {
       //     "Content-Type": "application/json",
-      //     Authorization: `Bearer ${loginData.token}`,
+      //     Authorization: Bearer ${loginData.token},
       //   },
       //   body: JSON.stringify(postData),
       // })
       //   .then((response) => {
       //     if (!response.ok) {
-      //       throw new Error(`HTTP error! status: ${response.status}`);
+      //       throw new Error(HTTP error! status: ${response.status});
       //     }
       //     return response.json();
       //   })
