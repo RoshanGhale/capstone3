@@ -4,7 +4,7 @@ const fullName = document.querySelector("#fullName");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const signupButton = document.querySelector("#signupButton");
-const confirmPassword = document.querySelector("#confirmPassword");
+
 
 function createNewUser() {
   let user = {
@@ -12,11 +12,7 @@ function createNewUser() {
     username: username.value,
     password: password.value,
   };
-  if (password.value !== confirmPassword.value) {
-    alert("Password does not match");
-  } else {
-    user.password = password.value;
-  }
+  
   let requestInit = {
     method: "POST",
     headers: { "Content-Type": "application/json" },

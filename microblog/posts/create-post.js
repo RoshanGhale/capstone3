@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(${apiBaseURL}/api/posts, requestInit)
         .then((response) => response.json())
         .then((post) => {
-          window.location.replace("posts.html");
+          window.location.assign("posts.html");
         });
 
       // fetch(${apiBaseURL}/api/posts, {
@@ -129,5 +129,5 @@ document.addEventListener("DOMContentLoaded", function () {
         // })
         .catch((error) => console.error("Error creating post:", error));
     }
-  });
+});
 });
