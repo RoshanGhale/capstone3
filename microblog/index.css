@@ -1,28 +1,28 @@
 
   #login {
-    background-color: #008CBA; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Get it to display like a box */
-    border-radius: 5px; /* Rounded corners */
-    margin-left: 20px; /* Space between login and register links */
+    background-color: #008CBA; 
+    color: white;
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    border-radius: 5px; 
+    margin-left: 20px; 
   }
   
   #login:hover {
-    background-color: #007B9E; /* Darker blue on hover */
+    background-color: #007B9E; 
   }
   
   #registerLink {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Get it to display like a box */
-    border-radius: 5px; /* Rounded corners */
-    margin-left: 20px; /* Space between login and register links */
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    border-radius: 5px;
+    margin-left: 20px; 
   }
 
   #registerLink:hover {
@@ -39,7 +39,7 @@
   header {
     background-color: #333335;
     color: white;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,4 +70,6 @@
     width: 100%;
     bottom: 0;
   }
- 
+#logo {
+  padding-left: 5rem;
+}

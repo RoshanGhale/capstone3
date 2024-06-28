@@ -1,0 +1,43 @@
+header {
+    background-color: #333335;
+    /* color: white; */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav a {
+    margin-right: 20px; 
+    /* color: white; */
+  }
+  footer {
+    background-color: #333335;
+    /* color: white; */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  #logoutButton {
+    color: white;
+    padding: 10px;
+    float: right;
+  
+  }
+  
+  #postt {
+    color:white;
+    padding: 10px;
+  }
+  #profilet {
+   color: white;
+   padding: 10px;
+  }
+  #createP {
+    color: white;
+    padding: 10px;
+  }
+  #logo {
+    padding-left: 5rem;
+  }
