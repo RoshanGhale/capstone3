@@ -1,7 +1,7 @@
 header {
     background-color: #333335;
     color: white;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,8 +22,11 @@ header {
     background-color: #333335;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
+  }
+  #logo {
+    padding-left: 3rem;
   }

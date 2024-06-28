@@ -1,4 +1,4 @@
-"user strict";
+"use strict";
 
 const fullName = document.querySelector("#fullName");
 const username = document.querySelector("#username");
@@ -25,4 +25,5 @@ function createNewUser() {
     });
 }
 
-signupButton.onclick = createNewUser;
+// signupButton.onclick = createNewUser;
+signupButton.addEventListener("click", createNewUser);

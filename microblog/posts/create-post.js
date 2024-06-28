@@ -20,14 +20,9 @@ function createPost() {
        });
 }*/
 
-
-
-
 // Authorization: `Bearer ${loginData.token}`,
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
   const postText = document.getElementById("postText");
 
   if (postText) {
@@ -75,4 +70,64 @@ document.addEventListener("DOMContentLoaded", function() {
         // Handle errors, e.g., display an error message to the user
       });
   }
+});*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const apiBaseURL = "http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts";
+  const createPostForm = document.getElementById("createPostForm");
+
+  createPostForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const postText = document.getElementById("postText").value;
+    console.log("Post Text:", postText);
+    
+    const loginData = getLoginData();
+    console.log("login Data:", loginData);
+
+    const postData = {
+      text: postText,
+    };
+    function createPost() {
+      // const loginData = getLoginData();
+      let requestInit = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${loginData.token}`,
+        },
+        body: JSON.stringify(postData),
+      };
+      fetch(`${apiBaseURL}/api/posts`, requestInit)
+        .then((response) => response.json())
+        .then((post) => {
+          window.location.replace("posts.html");
+        });
+
+      // fetch(`${apiBaseURL}/api/posts`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     Authorization: `Bearer ${loginData.token}`,
+      //   },
+      //   body: JSON.stringify(postData),
+      // })
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       throw new Error(`HTTP error! status: ${response.status}`);
+      //     }
+      //     return response.json();
+      //   })
+      then((data) => {
+        console.log("Post Created Response:", data);
+        alert("Post created sucessfully!");
+        window.location.assign("post.html");
+      })
+        // .then(post => {
+        //  console.log("Post created successfully:", post);
+        //  window.location.assign("posts.html"); // Redirect to posts page after successful creation
+        // })
+        .catch((error) => console.error("Error creating post:", error));
+    }
+  });
 });
